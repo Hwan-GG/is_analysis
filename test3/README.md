@@ -141,3 +141,41 @@ BookRecord "*" -- "1" Book
 ### 1.2. 类图如下：
 
 ![flow1](./test3_1.png)
+## 2. 图书管理系统的对象图
+
+### 2.1 manager
+```
+@startUml manager
+object Manager{
+    userID:"admin"
+    username:"赵三"
+    password:"96E79218965EB72C"
+    ----
+    addBook()
+    deleteBook()
+    editBookInfo()
+    editUserInfo()
+    searchBook()
+    findPassword()
+    login()
+    loginout()
+}
+@endUml
+```
+![flow1](./manager.png)
+### 2.2 book
+```
+@startUml book
+object Book{
+    ISBN:"ISBN9787117130691"
+    bookNum:"CDDX20151042XJ"
+    bookname:"翻译美学理论"
+    author:"刘宓庆"
+    publisher:"外语教学与研究出版社"
+    price:49.90
+    totalNum:5
+    restNum:3
+}
+@enduml
+```
+![flow1](./book.png)

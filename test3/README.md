@@ -200,3 +200,44 @@ object User{
 @enduml
 ```
 ![flow1](./user.png)
+### 2.4 BookRecord
+```
+@startuml
+object BookRecord{
+    userID:"201510414222"
+    bookNum:"CDDX20151042XJ|CDDX20151041XJ"
+    startTime:"2018-04-17"
+    endTime:"2018-04-30"
+    bookingNum:2
+    isCannel:true
+}
+@enduml
+```
+![flow1](./BookRecord.png)
+### 2.5 LendRecord
+```
+@startuml
+object LendRecord{
+    userID:"201510414222"
+    bookNum:"CDDX20151042XJ"
+    borrowTime:"2018-04-01"
+    returnTime:"2018-04-17"
+    isOverTime:-2
+    fine:0.40
+}
+@enduml
+```
+![flow1](./LendRecord.png)
+### 2.6 ManageBookInfo
+```
+@startuml
+object ManageBookInfo{
+    adminID:"admin"
+    bookNum:"CDDX20151042XJ"
+    actionTime:"2018-04-01"
+    action:"delete"
+    eventId:1500
+}
+@enduml
+```
+![flow1](./ManageBookInfo.png)

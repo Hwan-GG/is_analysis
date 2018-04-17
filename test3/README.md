@@ -179,3 +179,24 @@ object Book{
 @enduml
 ```
 ![flow1](./book.png)
+### 2.3 user
+```
+@startuml
+object User{
+    userID:"201510414222"
+    username:李四"
+    password:"1A100D2C0DAB19C4"
+    information:"某大学信工学院学生"
+    ----
+    searchBook()
+    bookingBook()
+    cannelBook()
+    editInformation()
+    showLendRecords()
+    findPassword()
+    login()
+    loginout()
+}
+@enduml
+```
+![flow1](./user.png)

@@ -140,4 +140,4 @@ BookRecord "*" -- "1" Book
 
 ### 1.2. 类图如下：
 
-![flow1](./test3-1.png)
+![flow1](./test3_1.png)

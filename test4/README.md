@@ -84,3 +84,20 @@ user <- manager:返回归还成功信息
 
 #### 说明:
 用户user向manager对象发起一个归还某图书的请求,对象manager收到请求后确认未超期并向对象user发起获取读者信息的请求，用户获取读者信息，接着再向LendRecord对象发起获取借阅书籍信息的请求，用于获取用户的借阅信息，并标注还书时间，最后向Book对象发起增加书籍可借阅量的请求，使得图书数量恢复至结束前的状态。最后manager对象向user返回归还成功.
+### 1.5 收取罚金用例
+#### 源码如下：
+``` 
+@startuml test4-5
+actor manager
+manager -> user:获取读者信息
+user -> LendRecord:获取超期时间
+LendRecord -> manager:超期时间
+manager -> user:计算并收取罚金
+@enduml
+```
+#### 用例顺序图
+
+![flow1](./test4-5.png)
+
+#### 说明:
+管理员manager向用户user对象发起获取读者信息的请求，接着向LendRecord对象发起获取超期时间的请求，LendRecord对象接收请求后向参与者manager返回该用户的超期时间，根据超期时间计算罚金并向user收取.

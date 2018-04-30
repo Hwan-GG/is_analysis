@@ -41,3 +41,24 @@ user <-- BookRecord:预定结果
 用例顺序图
 
 ![flow1](./test4-2.png)
+### 1.3 借阅图书用例
+源码如下：
+``` 
+@startuml test4-3
+actor manager
+actor user
+user -> manager:发起借阅请求
+user <- manager:批准借阅
+manager -> user:请求读者信息
+manager <- user:得到读者信息
+manager -> Book:请求书籍信息
+manager <- Book:得到书籍信息
+manager -> LendRecord:请求读者借阅信息
+manager <- LendRecord:得到借阅信息
+manager -> Book:减少书籍可借阅量
+manager -> LendRecord:添加借阅记录
+@enduml
+```
+用例顺序图
+
+![flow1](./test4-3.png)

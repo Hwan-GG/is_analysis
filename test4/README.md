@@ -65,3 +65,22 @@ manager -> LendRecord:添加借阅记录
 
 #### 说明:
 用户user向manager对象发起一个借阅某图书的请求,对象manager收到请求后批准借阅请求并向对象user发出对象发起获取读者信息的请求，对象user接收请求后返回该读者信息；然后参与者manager又向对象Book发起获取书籍信息请求，对象Book接收请求后返回该书籍的信息；然后参与者manager又向对象LendRecord发起读取读者借阅信息的请求，以获取该读者的借阅信息，参与者manager确认无误后向Book发起减少书籍可借数量请求，同时向LendRecord对象发起添加借阅记录的请求。
+### 1.4 归还图书用例
+#### 源码如下：
+``` 
+@startuml test4-4
+actor user
+actor manager
+user -> manager:发出还书请求
+manager -> user:确认读者未超期
+manager ->LendRecord:获取借阅书籍信息
+LendRecord -> Book:增加书籍可借阅量
+user <- manager:返回归还成功信息
+@enduml
+```
+#### 用例顺序图
+
+![flow1](./test4-4.png)
+
+#### 说明:
+用户user向manager对象发起一个归还某图书的请求,对象manager收到请求后确认未超期并向对象user发起获取读者信息的请求，用户获取读者信息，接着再向LendRecord对象发起获取借阅书籍信息的请求，用于获取用户的借阅信息，并标注还书时间，最后向Book对象发起增加书籍可借阅量的请求，使得图书数量恢复至结束前的状态。最后manager对象向user返回归还成功.

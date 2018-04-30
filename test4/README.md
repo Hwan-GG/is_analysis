@@ -27,3 +27,17 @@ book --> 图书查询窗口: 返回图书
 用例顺序图
 
 ![flow1](./test4-1.png)
+### 1.2 预订图书用例
+源码如下：
+``` 
+@startuml test4-2
+actor user
+user -> Book:查询书籍信息
+user <-- Book:书籍信息
+user -> BookRecord: 预定图书
+user <-- BookRecord:预定结果
+@enduml
+```
+用例顺序图
+
+![flow1](./test4-2.png)

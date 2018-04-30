@@ -101,3 +101,28 @@ manager -> user:计算并收取罚金
 
 #### 说明:
 管理员manager向用户user对象发起获取读者信息的请求，接着向LendRecord对象发起获取超期时间的请求，LendRecord对象接收请求后向参与者manager返回该用户的超期时间，根据超期时间计算罚金并向user收取.
+### 1.6 管理用户用例
+#### 源码如下：
+``` 
+@startuml test4-6
+actor manager
+manager -> user:管理用户
+manager <- user:操作结果
+@enduml
+```
+#### 用例顺序图
+
+![flow1](./test4-6.png)
+### 1.7 管理图书用例
+#### 源码如下：
+``` 
+@startuml test4-7
+actor manager
+manager -> Book:管理图书
+Book -> ManagerBookRecord:保存管理记录
+ManagerBookRecord --> manager:本次操作信息
+@enduml
+```
+#### 用例顺序图
+
+![flow1](./test4-7.png)

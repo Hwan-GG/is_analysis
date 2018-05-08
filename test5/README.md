@@ -58,44 +58,35 @@
 #### 2.1图书管理系统原型
 ![flow1](./manage.jpg)
 #### 2.2系统api
-- getBooks接口
-        
-        - 功能：
-            返回所有学生的列表。   
-            
-            学生登录，或者未登录不能看到RESULT_SUM，WEB_SUM，老师登录可以看到RESULT_SUM，WEB_SUM。
-            
-            该接口服务于：http://localhost/phpbook0.3/admin/admin_index.php
-            
-        - API请求地址： 
+- getBooks接口 
+- 功能：
+   返回所有学生的列表。   
+   该接口服务于：http://localhost/phpbook0.3/admin/admin_index.php
+- API请求地址： 
             http://localhost/phpbook0.3/admin/list.php
-        
-        - 请求方式 ：
+- 请求方式 ：
             GET  
-        
-        - 请求参数说明:        
+- 请求参数说明:        
             无
-            
-        - 返回实例：
-
+- 返回实例：
+ {
+        "status": true,
+        "info": null, 
+        "total": 9,         
+        "data": [
+               {"ID": "1", 
+                "BOOKNAME": "经典PHP编程", 
+                "CLASS": "php编程", 
+                "PRINCE": "66.00", 
+                "borrowTime": "2013-12-05 10:48:01", 
+                "restNum": "22", 
                 {
-                    "status": true,
-                    "info": null, 
-                    "total": 9,         
-                    "data": [
-                        {"ID": "1", 
-                        "BOOKNAME": "经典PHP编程", 
-                        "CLASS": "php编程", 
-                        "PRINCE": "66.00", 
-                        "borrowTime": "2013-12-05 10:48:01", 
-                        "restNum": "22", 
-                        {
-                        ...其他书籍
-                        }
-                    ] 
+                   ...其他书籍
+                }
+                ] 
                 }
           
-        - 返回参数说明：    
+- 返回参数说明：    
  
 |参数名称|说明|
 |:---------:|:--------------------------------------------------------|      

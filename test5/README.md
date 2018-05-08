@@ -48,9 +48,12 @@
 #### 1.6 BookRecord表
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|userID|varchar2(80)|主键|否| | | 用户编号|
+|userID|varchar2(14)|主键|否| | | 用户编号|
 |bookNum|varchar2(14)||否| | | 图书编号|
 |startTime|varchar2(30)| |否|||预定借阅时间|
 |endTime|varchar2(30)| |否|||预定归还时间|
 |bookingNum|int| |否|0||预定数量|
 |isCancel|bool| |否|||取消操作|
+### 2 页面设计
+#### 图书管理系统原型
+![flow1](./manage.jpg)

@@ -58,9 +58,9 @@
 #### 2.1图书管理系统原型
 ![flow1](./manage.jpg)
 #### 2.2系统api
-##### 2.2.1 getBooks接口 
+##### 2.2.1 列出所有图书接口 
 - 功能：
-   返回所有学生的列表。   
+   返回所有图书的json数据。   
    该接口服务于：http://localhost/phpbook0.3/admin/admin_index.php
 - API请求地址： 
             http://localhost/phpbook0.3/admin/list.php
@@ -104,7 +104,7 @@
 |restNum|当前可借阅量|
 ##### 2.2.2 用户注册接口 
 - 功能：
-   返回所有学生的列表。   
+   用户注册。   
    该接口服务于：http://localhost/phpbook0.3/index.php
 - API请求地址： 
             http://localhost/phpbook0.3/reg.php
@@ -145,7 +145,7 @@
 |result|success表示注册成功，faild表示注册失败|
 ##### 2.2.3 图书修改接口 
 - 功能：
-   返回所有学生的列表。   
+   返回所修改的图书信息。   
    该接口服务于：http://localhost/phpbook0.3/admin/admin_index.php
 - API请求地址： 
             http://localhost/phpbook0.3/admin/modif.php
@@ -163,6 +163,8 @@
    "class":"php编程",
    "author":"李四",
    "restnum":25,
+   "publisher":"成都大学出版社",
+   "price":"2.50"
   }
   ~~~
 - 提交参数说明：    
@@ -173,6 +175,8 @@
 |bookName|书名|
 |author|作者|
 |class|图书类别|
+|price|单价|
+|publisher|出版社|
 |restnum|图书总量|
 - 返回实例：
 ~~~
@@ -188,3 +192,49 @@
 |:---------:|:--------------------------------------------------------|      
 |status|bool类型，true表示正确的返回，false表示有错误|
 |result|success表示更新成功，faild表示更新失败|
+##### 2.2.4 图书查询接口 
+- 功能：
+   返回符合条件的图书。   
+   该接口服务于：http://localhost/phpbook0.3/search.php
+- API请求地址： 
+            http://localhost/phpbook0.3/search.php
+- 请求方式 ：
+            GET  
+- 请求参数说明: 
+            keyword
+- 返回实例：
+~~~
+ {
+ "status": true,
+ "info": null, 
+ "total": 8,         
+        "data": [
+                  {"ID": "1", 
+                  "BOOKNAME": "经典PHP编程", 
+                  "CLASS": "php编程", 
+                  "PRINCE": "66.00", 
+                  "borrowTime": "2013-12-05 10:48:01", 
+                  "restNum": "22", 
+                  {
+                     ...其他书籍
+                  }
+                ] 
+  }
+~~~
+          
+- 返回参数说明：    
+ 
+|参数名称|说明|
+|:---------:|:--------------------------------------------------------|      
+|status|bool类型，true表示正确的返回，false表示有错误|
+|info|返回结果说明信息|
+|total|返回书籍总量|
+|data|所有图书的数组|
+|id|书籍id|
+|bookname|书名|
+|CLASS|类别|
+|prince|本书单价|
+|borrowTime|最近的节约时间|
+|restNum|当前可借阅量|
+##### 其他说明
+其他功能接口大抵与以上相似或相同，不再一一列举

@@ -9,9 +9,16 @@
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
 |bookNum|varchar2(14)|主键|否| | | 图书编号|
 |ISBN|varchar2(14)||否| | | 为书本印刷的ISBN号|
-|bookname|varchar2(60)| |否||||
-|author|varchar2(50)| |是||||
-|publisher|varchar2(100)| |是||||
-|price|double| |否|0.0|||
+|bookName|varchar2(60)| |否|||书名|
+|author|varchar2(50)| |是|||作者|
+|publisher|varchar2(100)| |是|||出版社|
+|price|double| |否|0.0||单价|
 |totalNum|int| |否|0| |即该图书库存的总量|
 |restNum|int| |否|0| |目前可借的图书量|
+#### 1.1user表
+|字段|类型|主键，外键|可以为空|默认值|约束|说明|
+|:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
+|userID|varchar2(14)|主键|否| | | 用户编号|
+|username|varchar2(14)||否| | | 用户名|
+|password|varchar2(60)| |否|||密码|
+|information|varchar2(100)| |是|||个人简介|

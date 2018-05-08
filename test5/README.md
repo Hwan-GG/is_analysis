@@ -58,7 +58,7 @@
 #### 2.1图书管理系统原型
 ![flow1](./manage.jpg)
 #### 2.2系统api
-- getBooks接口 
+##### 2.2.1 getBooks接口 
 - 功能：
    返回所有学生的列表。   
    该接口服务于：http://localhost/phpbook0.3/admin/admin_index.php
@@ -102,3 +102,89 @@
 |prince|本书单价|
 |borrowTime|最近的节约时间|
 |restNum|当前可借阅量|
+##### 2.2.2 用户注册接口 
+- 功能：
+   返回所有学生的列表。   
+   该接口服务于：http://localhost/phpbook0.3/index.php
+- API请求地址： 
+            http://localhost/phpbook0.3/reg.php
+- 请求方式 ：
+            GET  
+- 请求参数说明: 
+            无
+- 提交方式 ：
+            POST
+- 提交参数说明: 
+  ~~~
+  {
+   "username":"admin",
+   "password":"123",
+   [other]:[other]
+  }
+  ~~~
+- 提交参数说明：    
+ 
+|参数名称|说明|
+|:---------:|:--------------------------------------------------------|      
+|username|用户名|
+|password|密码|
+|other|其他信息|
+- 返回实例：
+~~~
+ {
+ "status": true,       
+ "result":"success"
+  }
+~~~
+          
+- 返回参数说明：    
+ 
+|参数名称|说明|
+|:---------:|:--------------------------------------------------------|      
+|status|bool类型，true表示正确的返回，false表示有错误|
+|result|success表示注册成功，faild表示注册失败|
+##### 2.2.3 图书修改接口 
+- 功能：
+   返回所有学生的列表。   
+   该接口服务于：http://localhost/phpbook0.3/admin/admin_index.php
+- API请求地址： 
+            http://localhost/phpbook0.3/admin/modif.php
+- 请求方式 ：
+            GET  
+- 请求参数说明: 
+            无
+- 提交方式 ：
+            POST
+- 提交参数说明: 
+  ~~~
+  {
+   "bookNum":"CDDX123456",
+   "bookName":"经典php编程",
+   "class":"php编程",
+   "author":"李四",
+   "restnum":25,
+  }
+  ~~~
+- 提交参数说明：    
+ 
+|参数名称|说明|
+|:---------:|:--------------------------------------------------------|      
+|bookNum|图书编号|
+|bookName|书名|
+|author|作者|
+|class|图书类别|
+|restnum|图书总量|
+- 返回实例：
+~~~
+ {
+ "status": true,       
+ "result":"success"
+  }
+~~~
+          
+- 返回参数说明：    
+ 
+|参数名称|说明|
+|:---------:|:--------------------------------------------------------|      
+|status|bool类型，true表示正确的返回，false表示有错误|
+|result|success表示更新成功，faild表示更新失败|

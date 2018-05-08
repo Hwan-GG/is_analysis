@@ -70,9 +70,9 @@
             无
 - 返回实例：
  {
-        "status": true,
-        "info": null, 
-        "total": 9,         
+ "status": true,
+ "info": null, 
+ "total": 9,         
         "data": [
                {"ID": "1", 
                 "BOOKNAME": "经典PHP编程", 

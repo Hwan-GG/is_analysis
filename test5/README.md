@@ -69,22 +69,24 @@
 - 请求参数说明:        
             无
 - 返回实例：
+~~~
  {
  "status": true,
  "info": null, 
  "total": 9,         
         "data": [
-               {"ID": "1", 
-                "BOOKNAME": "经典PHP编程", 
-                "CLASS": "php编程", 
-                "PRINCE": "66.00", 
-                "borrowTime": "2013-12-05 10:48:01", 
-                "restNum": "22", 
-                {
-                   ...其他书籍
-                }
+                  {"ID": "1", 
+                  "BOOKNAME": "经典PHP编程", 
+                  "CLASS": "php编程", 
+                  "PRINCE": "66.00", 
+                  "borrowTime": "2013-12-05 10:48:01", 
+                  "restNum": "22", 
+                  {
+                     ...其他书籍
+                  }
                 ] 
-                }
+  }
+~~~
           
 - 返回参数说明：    
  

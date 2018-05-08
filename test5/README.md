@@ -4,26 +4,12 @@
 |201510414205|软件(本)15-2|黄伟|![flow1](../myself.jpg)|
 
 ### 1.1 查询图书用例
-#### 源码如下：
-
-``` 
-@startUml test4-1
-title 图书查询
-hide footbox
-skinparam backgroundColor #ded
-actor user
-boundary 图书查询窗口
-activate user
-activate 图书查询窗口
-user -> 图书查询窗口: 输入检索条件
-图书查询窗口 -> 图书查询窗口: 验证输入信息
-user -> 图书查询窗口: 点击查看详情
-database book
-图书查询窗口 -> book: 查询图书
-activate book
-book --> 图书查询窗口: 返回图书
-@endUml
-```
-#### 用例顺序图
-
-![flow1](./test4-1.png)
+|字段|类型|主键，外键|可以为空|默认值|约束|说明|
+|:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
+|ISBN|varchar2(14)|主键|否| | | 为书本印刷的ISBN号|
+|bookname|varchar2(60)| |否||||
+|author|varchar2(50)| |是||||
+|publisher|varchar2(100)| |是||||
+|price|double| |否|0.0|||
+|totalNum|int| |否|0| |即该图书库存的总量|
+|restNum|int| |否|0| |目前可借的图书量|

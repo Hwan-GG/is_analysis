@@ -13,3 +13,4 @@
 - 系统自动计算每个学生的所有实验的平均分。
 ## 2.系统总体结构
 ![flow1](./picture/总体设计.png)
+页面设计[visist it](https://github.com/hwaning/is_analysis/blob/master/test6/InterfaceDesign/README.md)

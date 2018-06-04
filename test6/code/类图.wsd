@@ -64,6 +64,13 @@ class terms {
     addTime (增加时间)
 }
 
+class  announcement{
+    <b>annId</b> （公告编号）
+    title (通告名称)
+    addTime (发布时间)
+    content (通告内容)
+}
+
 student "1" -- "n"  grade
 test "1" -- "n"  grade
 course "1" -- "n"  grade
@@ -72,5 +79,7 @@ stuCourse "1" -- "n" course
 terms "1" -- "n" course 
 teacher "1" -- "n" course 
 course "1" -- "n"  test
+teacher "1" -- "n" announcement
+student "1" -- "n" announcement
 
 @enduml

@@ -1,0 +1,76 @@
+@startuml
+title 基于GitHub的教务管理平台--类图
+class teacher {
+    <b>id</b> （自增）
+    tecNo (教师编号)
+    tecName (教师姓名)
+    gitName (教师GitHub的名称)
+    tecPwd (教师密码)
+    addTime(教师创建时间)
+    status (教师是否禁用)
+}
+class stuCourse {
+    <b>id</b> （自增）
+    courseNo (课程编号)
+    stuNo (学生编号)
+    addTime (增加日期)
+}
+
+class student {
+    <b>id</b> （自增）
+    <b>courseNo</b> （课程编号）
+    stuNo (学生编号)
+    stuName (学生姓名)
+    gitName (学生GitHub的名称)
+    stuPwd (学生密码)
+    stuClass(学生班级)
+    addTime(学生创建时间)
+    status (学生是否禁用)
+    
+}
+class course {
+    <b>id</b> （自增）
+    courseNo (课程编号)
+    course_name (课程名称)
+    status (状态)
+    addTime (增加日期)
+    <b>termId</b> （学期编号）
+    <b>stuNo</b> （学生编号）
+    <b>tecNo</b> （教师编号）
+}
+
+class grade {
+    <b>gradeId</b> （自增）
+    grade1 (分数1)
+    grade2 (分数2)
+    grade3 (分数3)
+    memo (评价)
+    addTime (评改日期)
+    <b>testId</b> （实验编号）
+    <b>courseNo</b> （课程编号）
+    <b>stuNo</b> （学生编号）
+}
+
+class test {
+    <b>testId</b> （实验编号）
+    title (实验名称)
+    addTime (增加时间)
+    <b>courseNo</b> （课程编号）
+}
+
+class terms {
+    <b>termId</b> （学期编号）
+    title (学期名称)
+    addTime (增加时间)
+}
+
+student "1" -- "n"  grade
+test "1" -- "n"  grade
+course "1" -- "n"  grade
+stuCourse "1" -- "n" student
+stuCourse "1" -- "n" course 
+terms "1" -- "n" course 
+teacher "1" -- "n" course 
+course "1" -- "n"  test
+
+@enduml

@@ -12,6 +12,6 @@
 - 实验成绩按数字分数计算，每项实验的满分为100分，最低为0分。
 - 系统自动计算每个学生的所有实验的平均分。
 ## 2.系统总体结构
-![flow1](./picture/总体设计.png)
+![flow1](./picture/基于GitHub的教务管理平台--用例图.png)
 页面设计[visist it](https://github.com/hwaning/is_analysis/blob/master/test6/InterfaceDesign/README.md)
 ## 3.用例图设计 [源码](https://github.com/hwaning/is_analysis/blob/master/test6/InterfaceDesign/README.md)

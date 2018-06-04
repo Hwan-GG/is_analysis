@@ -42,6 +42,6 @@ COURSE_NO |课程编号
 COURSE_NAME |课程名称
 TERM_ID |学期编号
 STU_NO |学生编号
-TCH_NO |老师编号
+TEC_NO |老师编号
 STATUS |是否正常
 ADDTIME | 增加日期

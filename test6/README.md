@@ -19,6 +19,6 @@
 ## 4.类图设计 [源码](./code/类图.wsd)
 ![flow1](./picture/类图.png)
 ## 5.数据库设计 
-### [visit it](./picture/类图.png)
+### 数据库设计[visit it](./数据库设计.md)
 ## 6.用例及界面详细设计
 ### [visit it](./picture/类图.png)

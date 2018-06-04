@@ -20,3 +20,5 @@
 ![flow1](./picture/类图.png)
 ## 5.数据库设计 
 ### [visit it](./picture/类图.png)
+## 6.用例及界面详细设计
+### [visit it](./picture/类图.png)
